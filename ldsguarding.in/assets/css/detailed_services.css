@@ -1,0 +1,135 @@
+.main-div{
+  
+   
+}
+
+.inner-div{
+    /* height: 150px;
+    width: 150px; */
+    position: relative;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:30px auto;
+    /* margin-bottom: 10px; */
+    /* box-shadow: 10px 10px 5px rgb(246,246,246); */
+    
+}
+
+.inner-div:before {
+    position: absolute;
+    content: "";
+    width: 190px;
+    height: 170px;
+    left: 0;
+    right: -12px;
+    top: -27px;
+    text-align: center;
+    margin: 0 auto;
+    -webkit-mask-box-image: url(../img/elementBg.svg);
+    -webkit-mask: url(../img/elementBg.svg);
+    background-size: cover;
+    background-color: #eeeeee;
+    background-repeat: no-repeat;
+    z-index:-1;
+}
+
+.icon{
+    font-size: 40px;
+    width: 146px;
+    height: 128px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 30px;
+    box-shadow: 0 0 12px 0 rgb(0 0 0 / 11%);
+
+}
+
+.icon:before{
+    pointer-events: none;
+    position: absolute;
+    z-index: -1;
+    content: '';
+    top: 100%;
+    left: 5%;
+    height: 10px;
+    width: 90%;
+    opacity: 0;
+    background: -webkit-radial-gradient(center, ellipse, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%);
+    background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform, opacity;
+    transition-property: transform, opacity
+}
+
+
+.icon i{
+    font-size: 35px;
+    color: #003054;
+}
+
+.inner-div:hover::before {
+    animation: rotate 1.8s linear infinite;
+    background-color: #E5B20A;
+}
+
+.inner-div:hover .icon:before {
+    opacity: 1;
+    -webkit-transform: translateY(5px);
+    transform: translateY(5px);
+}
+@keyframes rotate {
+    0% {
+        transform: translateY(-6px) translateX(0px);
+    }
+    33.33% {
+        transform: translateY(3px) translateX(-3px);
+    }
+    50% {
+        transform: translateY(4px) translateX(-4px);
+    }
+    66.67% {
+        transform: translateY(3px) translateX(-3px);
+    }
+    100% {
+        transform: translateY(-6px) translateX(0px);
+    }
+}
+
+.numInCirlce{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -17px;
+    right: -17px;
+    height: 49px;
+    width: 49px;
+    line-height: 49px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0px 9px 0px rgb(0 0 0 / 12%);
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+
+
+.heading{
+    text-align: center;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0.1px;
+}
+
+.main-heading{
+    font-weight: bold;
+}
